@@ -33,7 +33,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex items-center justify-center overflow-hidden pt-24 md:pt-32 pb-12 md:pb-16">
+    <section className="relative flex items-center justify-center overflow-hidden pt-20 md:pt-32 pb-12 md:pb-16">
       {/* Animated background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
 
