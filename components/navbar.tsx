@@ -9,12 +9,27 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { language, toggleLanguage, t } = useLanguage();
 
   useEffect(() => {
     // Check if dark mode is already set
     const isDarkMode = document.documentElement.classList.contains("dark");
     setIsDark(isDarkMode);
+  }, []);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleDarkMode = () => {
@@ -57,7 +72,11 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="absolute top-0 left-0 right-0 z-50"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background border-b border-border shadow-sm"
+          : "bg-transparent"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-end gap-4">
         {/* Desktop Navigation */}
