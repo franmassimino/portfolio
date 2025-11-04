@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, Github, Linkedin, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
@@ -33,6 +33,24 @@ export default function Navbar() {
     { labelKey: "nav.about", href: "#about" },
     { labelKey: "nav.projects", href: "#projects" },
   ];
+
+  const socialLinks = [
+    { icon: Github, href: "https://github.com/francisco-massimino", label: "GitHub" },
+    { icon: Linkedin, href: "https://linkedin.com/in/francisco-massimino", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:franmassi1904@gmail.com", label: "Email" },
+  ];
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
   return (
     <motion.nav
@@ -149,49 +167,114 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          className="md:hidden bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800"
-        >
-          <div className="max-w-7xl mx-auto px-6 py-4 space-y-3">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={`mobile-nav-${language}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="space-y-3"
+      {/* Mobile Navigation - Full Screen Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 md:hidden"
+              onClick={() => setIsOpen(false)}
+            />
+
+            {/* Menu Content */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="fixed inset-0 z-50 md:hidden flex flex-col items-center justify-center px-6"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                className="absolute top-6 right-6 p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors"
+                onClick={() => setIsOpen(false)}
+                aria-label="Close menu"
               >
-                {navItems.map((item) => (
-                  <a
-                    key={item.labelKey}
-                    href={item.href}
-                    className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t(item.labelKey)}
-                  </a>
-                ))}
-                <Button
-                  size="sm"
-                  className="w-full"
-                  onClick={() => {
-                    setIsOpen(false);
-                    console.log("Contact clicked");
-                  }}
+                <X className="h-6 w-6" />
+              </button>
+
+              {/* Menu Items Container */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`mobile-menu-${language}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                  className="flex flex-col items-center justify-center space-y-8 w-full max-w-md"
                 >
-                  {t("nav.contact")}
-                </Button>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </motion.div>
-      )}
+                  {/* Navigation Links */}
+                  <div className="flex flex-col items-center space-y-6 w-full">
+                    {navItems.map((item, index) => (
+                      <motion.a
+                        key={item.labelKey}
+                        href={item.href}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
+                        className="text-xl font-semibold text-foreground hover:text-primary transition-colors duration-200"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {t(item.labelKey)}
+                      </motion.a>
+                    ))}
+                  </div>
+
+                  {/* CTA Button - Large */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.4 }}
+                    className="w-full max-w-xs"
+                  >
+                    <Button
+                      size="lg"
+                      className="w-full text-lg py-6"
+                      onClick={() => {
+                        setIsOpen(false);
+                        console.log("Contact clicked");
+                      }}
+                    >
+                      {t("nav.contact")}
+                    </Button>
+                  </motion.div>
+
+                  {/* Social Links */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.5 }}
+                    className="flex gap-6 pt-8"
+                  >
+                    {socialLinks.map((social, index) => (
+                      <motion.a
+                        key={social.label}
+                        href={social.href}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
+                        whileHover={{ scale: 1.1, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="p-4 rounded-full bg-background border border-input shadow-sm hover:shadow-md transition-all duration-300"
+                        aria-label={social.label}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <social.icon className="h-6 w-6 text-foreground/70" />
+                      </motion.a>
+                    ))}
+                  </motion.div>
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 }
