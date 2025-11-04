@@ -33,7 +33,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex items-center justify-center overflow-hidden pt-32 pb-12 md:pb-16">
+    <section className="relative flex items-center justify-center overflow-hidden pt-24 md:pt-32 pb-12 md:pb-16">
       {/* Animated background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
 
@@ -97,7 +97,7 @@ export default function Hero() {
         {/* Main heading */}
         <motion.h1
           variants={itemVariants}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8 text-foreground"
+          className="text-5xl lg:text-6xl font-bold tracking-tight mb-8 text-foreground"
         >
           {t("hero.title")}
         </motion.h1>

@@ -42,7 +42,7 @@ export default function ProjectContent({
       <Navbar />
 
       {/* Hero */}
-      <section className="py-16 px-8 max-w-6xl mx-auto">
+      <section className="pt-16 pb-4 px-8 max-w-6xl mx-auto">
         <Link
           href="/#projects"
           className="inline-flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors mb-8"
@@ -65,22 +65,24 @@ export default function ProjectContent({
 
         <h1 className="text-4xl md:text-6xl font-bold mb-6">{title}</h1>
         <p className="text-xl text-foreground/70 mb-8">{description}</p>
+      </section>
 
-
-        <div className="w-full rounded-lg overflow-hidden bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center p-6">
+      {/* Cover Image - Full width on mobile */}
+      <div className="w-full -mx-0 md:mx-auto md:max-w-6xl md:px-8 mt-0 mb-6 md:mb-12">
+        <div className="w-full rounded-lg overflow-hidden bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center p-0 md:p-6">
           <div className="relative w-full max-w-5xl">
             <Image
               src={project.coverImage}
               alt={title}
               width={1200}
               height={800}
-              className="object-contain w-full h-auto max-h-[600px] mx-auto"
+              className="object-cover md:object-contain w-full h-auto max-h-[600px] md:max-h-[600px] mx-auto"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
               priority
             />
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Key Features */}
       <section className="py-2 px-8 max-w-6xl mx-auto">

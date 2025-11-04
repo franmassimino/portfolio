@@ -117,10 +117,10 @@
   * {
     @apply border-border outline-ring/50 transition-colors duration-150;
   }
-  /* Más rápida en móvil para mejor rendimiento */
+  /* Transición mínima en móvil (instantánea) */
   @media (max-width: 768px) {
     * {
-      transition-duration: 100ms;
+      transition-duration: 0ms;
     }
   }
   body {
