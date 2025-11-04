@@ -68,7 +68,7 @@ export default function ProjectContent({
       </section>
 
       {/* Cover Image - Full width on mobile */}
-      <div className="w-full -mx-0 md:mx-auto md:max-w-6xl md:px-8 mt-0 mb-6 md:mb-12">
+      <div className="w-full mx-0 md:mx-auto md:max-w-6xl px-8 md:px-8 mt-0 mb-6 md:mb-12">
         <div className="w-full rounded-lg overflow-hidden bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center p-0 md:p-6">
           <div className="relative w-full max-w-5xl">
             <Image
