@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy Fran!",
+    "title": "Construyo aplicaciones web que funcionan, se ven bien y hacen crecer negocios.",
+    "subtitle": "Desarrollador full stack con +4 años de experiencia creando y lanzando productos digitales.",
+    "cta_contact": "Contactar",
+    "cta_work": "Ver mi trabajo"
+  },
+  "about": {
+    "badge": "Sobre mí",
+    "intro": "Soy Francisco, un desarrollador full-stack que disfruta construir experiencias digitales significativas.",
+    "description1": "Con más de 4 años creando aplicaciones y productos web, he aprendido a moverme cómodamente entre código, producto y marketing — conectando la ejecución técnica con resultados de negocio.",
+    "description2": "Me enfoco en crear soluciones digitales simples, rápidas y confiables que equilibran la experiencia del usuario con los objetivos empresariales.",
+    "description3": "Actualmente, estoy completando un Máster en Digital Product Management en The Valley Business School, profundizando mi comprensión de estrategia de producto, metodologías ágiles e innovación lean.",
+    "stack_label": "Stack:",
+    "location": "Radicado en Madrid • Abierto a roles de ingeniería orientada a producto & colaboraciones freelance selectivas",
+    "cta": "Construyamos algo"
+  },
+  "projects": {
+    "badge": "Casos de Estudio",
+    "title": "Algunos casos de estudio",
+    "description": "Una selección de proyectos freelance y de producto en los que he trabajado — desde la idea hasta resultados medibles."
+  }
+}
