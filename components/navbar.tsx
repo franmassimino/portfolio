@@ -78,7 +78,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-end gap-4">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between md:justify-end gap-4">
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           <AnimatePresence mode="wait">
@@ -151,27 +151,42 @@ export default function Navbar() {
           </motion.div>
         </Button>
 
-        {/* Mobile menu button */}
-        <div className="md:hidden flex items-center gap-2">
-          <button
-            className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors relative"
-            onClick={toggleDarkMode}
-            aria-label="Toggle dark mode"
-          >
-            <motion.div
-              key={isDark ? "sun" : "moon"}
-              initial={{ opacity: 0, rotate: -180, scale: 0 }}
-              animate={{ opacity: 1, rotate: 0, scale: 1 }}
-              exit={{ opacity: 0, rotate: 180, scale: 0 }}
-              transition={{ duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
+        {/* Mobile Navigation Controls */}
+        <div className="md:hidden flex items-center justify-between w-full">
+          {/* Left side - Theme and Language toggles */}
+          <div className="flex items-center gap-2">
+            <button
+              className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors relative"
+              onClick={toggleDarkMode}
+              aria-label="Toggle dark mode"
             >
-              {isDark ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
-            </motion.div>
-          </button>
+              <motion.div
+                key={isDark ? "sun" : "moon"}
+                initial={{ opacity: 0, rotate: -180, scale: 0 }}
+                animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                exit={{ opacity: 0, rotate: 180, scale: 0 }}
+                transition={{ duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
+              >
+                {isDark ? (
+                  <Sun className="h-5 w-5" />
+                ) : (
+                  <Moon className="h-5 w-5" />
+                )}
+              </motion.div>
+            </button>
+            <button
+              className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors relative"
+              onClick={toggleLanguage}
+              aria-label="Toggle language"
+              title={`Switch to ${language === "es" ? "English" : "Español"}`}
+            >
+              <span className="text-sm font-semibold">
+                {language.toUpperCase()}
+              </span>
+            </button>
+          </div>
+
+          {/* Right side - Menu button */}
           <button
             className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
@@ -287,6 +302,24 @@ export default function Navbar() {
                         <social.icon className="h-6 w-6 text-foreground/70" />
                       </motion.a>
                     ))}
+                  </motion.div>
+
+                  {/* Language Toggle */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.6 }}
+                    className="pt-6"
+                  >
+                    <button
+                      onClick={toggleLanguage}
+                      className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background border border-input shadow-sm hover:shadow-md transition-all duration-300"
+                      aria-label="Toggle language"
+                    >
+                      <span className="text-sm font-semibold">
+                        {language === "es" ? "🇪🇸 Español" : "🇺🇸 English"}
+                      </span>
+                    </button>
                   </motion.div>
                 </motion.div>
               </AnimatePresence>
