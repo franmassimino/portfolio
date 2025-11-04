@@ -25,5 +25,13 @@
     "badge": "Case Studies",
     "title": "Some case studies",
     "description": "A selection of freelance and product projects I've worked on — from idea to measurable results."
+  },
+  "footer": {
+    "cta": "Let's build something amazing together",
+    "cta_description": "I'm always open to discussing product ideas, interesting roles, or how I can help bring your vision to life.",
+    "contact_email": "franmassi1904@gmail.com",
+    "links_title": "Links",
+    "social_title": "Social",
+    "copyright": "© 2024 Francisco Massimino. All rights reserved."
   }
 }

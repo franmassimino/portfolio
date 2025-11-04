@@ -141,7 +141,7 @@ export default function Projects() {
               transition={{ duration: 0.3 }}
             >
               <Link href={project.href}>
-                <Card className="group pt-0 relative overflow-hidden border border-primary/20 bg-background/50 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 h-full">
+                <Card className="group pt-0 relative overflow-hidden border border-primary/20 bg-background/50 backdrop-blur-sm transition-all duration-300 h-full">
                   {/* Project Image */}
                   <div className="relative w-full aspect-video overflow-hidden bg-primary/5">
                     <Image
@@ -154,7 +154,7 @@ export default function Projects() {
 
                   <CardContent className="px-6">
                     {/* Project Title */}
-                    <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-bold mb-2 text-foreground  transition-colors">
                       {project.title}
                     </h3>
 

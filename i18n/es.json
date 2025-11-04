@@ -25,5 +25,13 @@
     "badge": "Casos de Estudio",
     "title": "Algunos casos de estudio",
     "description": "Una selección de proyectos freelance y de producto en los que he trabajado — desde la idea hasta resultados medibles."
+  },
+  "footer": {
+    "cta": "Construyamos algo increíble juntos",
+    "cta_description": "Siempre estoy abierto a discutir ideas de producto, roles interesantes, o cómo puedo ayudarte a llevar tu visión a la realidad.",
+    "contact_email": "franmassi1904@gmail.com",
+    "links_title": "Enlaces",
+    "social_title": "Social",
+    "copyright": "© 2024 Francisco Massimino. Todos los derechos reservados."
   }
 }

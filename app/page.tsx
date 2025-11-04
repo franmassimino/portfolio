@@ -3,6 +3,7 @@ import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import About from "@/components/about";
 import Projects from "@/components/projects";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   description: "Full stack developer with +4 years of experience creating and launching digital products. Building web applications that work, look great, and grow businesses.",
@@ -25,6 +26,7 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
+      <Footer />
     </main>
   );
 }
