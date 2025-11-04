@@ -6,7 +6,6 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
   const { t } = useLanguage();
-  const currentYear = new Date().getFullYear();
 
   const fadeInVariants = {
     hidden: { opacity: 0, y: 10 },
@@ -110,7 +109,7 @@ export default function Footer() {
           className="py-4 text-center"
         >
           <p className="text-xs text-muted-foreground">
-            {t("footer.copyright").replace("2024", currentYear.toString())}
+            {t("footer.copyright")}
           </p>
         </motion.div>
       </div>
