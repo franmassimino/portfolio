@@ -117,12 +117,13 @@ export default function Hero() {
           <Button
             size="lg"
             variant="outline"
+            className="w-full sm:w-auto h-14 sm:h-10 text-lg sm:text-base"
           >
             {t("hero.cta_contact")}
           </Button>
           <Button
             size="lg"
-            className="group flex items-center justify-center"
+            className="group flex items-center justify-center w-full sm:w-auto h-14 sm:h-10 text-lg sm:text-base"
           >
             {t("hero.cta_work")}
             <ArrowRight />
