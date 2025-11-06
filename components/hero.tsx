@@ -97,7 +97,7 @@ export default function Hero() {
         {/* Main heading */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl lg:text-6xl font-bold tracking-tight mb-8 text-foreground"
+          className="text-5xl lg:text-6xl max-w-5xl font-bold tracking-tight mb-8 text-foreground"
         >
           {t("hero.title")}
         </motion.h1>
