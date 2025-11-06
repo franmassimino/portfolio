@@ -97,13 +97,13 @@ export default function Hero() {
         {/* Main heading */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl lg:text-6xl max-w-5xl font-bold tracking-tight mb-8 text-foreground"
+          className="text-5xl lg:text-6xl max-w-5xl font-bold tracking-tight mb-6 md:mb-8 text-foreground"
         >
           {t("hero.title")}
         </motion.h1>
 
         {/* Subtitle */}
-        <motion.div variants={itemVariants} className="max-w-3xl mx-auto mb-8">
+        <motion.div variants={itemVariants} className="max-w-3xl mx-auto mb-6 md:mb-8">
           <p className="text-lg md:text-xl max-w-[500px] mx-auto text-foreground/60">
             {t("hero.subtitle")}
           </p>
