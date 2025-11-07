@@ -15,7 +15,7 @@ interface ProjectKeyFeaturesProps {
 
 export function ProjectKeyFeatures({ features, isSpanish }: ProjectKeyFeaturesProps) {
   return (
-    <section className="py-12 px-8 max-w-6xl mx-auto">
+    <section className="py-6 md:py-12 px-8 max-w-6xl mx-auto">
       <h2 className="text-3xl font-bold mb-12 text-center">
         {isSpanish ? "Características Clave" : "Key Features"}
       </h2>

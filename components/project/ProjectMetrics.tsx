@@ -21,7 +21,7 @@ export function ProjectMetrics({ metrics, isSpanish }: ProjectMetricsProps) {
   if (!metrics || metrics.length === 0) return null;
 
   return (
-    <section className="py-12 px-8 max-w-6xl mx-auto">
+    <section className="py-6 md:py-12 px-8 max-w-6xl mx-auto">
       <h2 className="text-3xl font-bold mb-12 text-center">
         {isSpanish ? "Resultados" : "Results"}
       </h2>
