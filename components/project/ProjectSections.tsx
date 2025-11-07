@@ -8,7 +8,7 @@ interface ProjectSectionsProps {
 
 export function ProjectSections({ sections, isSpanish }: ProjectSectionsProps) {
   return (
-    <section className="py-12 px-8 max-w-6xl mx-auto">
+    <section className="px-8 max-w-6xl mx-auto">
       <div className="space-y-8">
         {sections.map((section, index) => {
           const sectionTitle = isSpanish && section.titleEs ? section.titleEs : section.title;

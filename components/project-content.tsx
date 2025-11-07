@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 import Navbar from "@/components/navbar";
 import { useLanguage } from "@/context/LanguageContext";
 import type { ProjectData } from "@/lib/projects";
 import {
   ProjectHero,
   ProjectCoverImage,
-  ProjectKeyFeatures,
+  // ProjectKeyFeatures,
   ProjectSections,
   ProjectMetrics,
   ProjectImpact,
@@ -43,7 +44,36 @@ export default function ProjectContent({
   const keyTakeaways = isSpanish && project.keyTakeawaysEs ? project.keyTakeawaysEs : project.keyTakeaways;
 
   return (
-    <main className="min-h-screen">
+    <main className="relative min-h-screen">
+      {/* Animated background grid */}
+      <div className="fixed inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] -z-10" />
+
+      {/* Gradient orbs */}
+      <motion.div
+        className="fixed top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -z-10"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="fixed bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10"
+        animate={{
+          scale: [1.2, 1, 1.2],
+          opacity: [0.5, 0.3, 0.5],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+
       <Navbar />
 
       <ProjectHero
@@ -55,7 +85,7 @@ export default function ProjectContent({
 
       <ProjectCoverImage src={project.coverImage} alt={title} />
 
-      <ProjectKeyFeatures features={project.keyFeatures} isSpanish={isSpanish} />
+      {/* <ProjectKeyFeatures features={project.keyFeatures} isSpanish={isSpanish} /> */}
 
       <ProjectSections sections={project.sections} isSpanish={isSpanish} />
 

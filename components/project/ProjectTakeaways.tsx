@@ -9,7 +9,7 @@ export function ProjectTakeaways({ takeaways, isSpanish }: ProjectTakeawaysProps
   if (!takeaways || takeaways.length === 0) return null;
 
   return (
-    <section className="py-12 px-8 max-w-6xl mx-auto">
+    <section className="pt-12 px-8 max-w-6xl mx-auto">
       <div className="flex items-center gap-3 mb-8">
         <Lightbulb className="w-8 h-8 text-primary" />
         <h2 className="text-3xl font-bold">
