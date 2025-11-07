@@ -26,6 +26,22 @@
     "title": "Algunos casos de estudio",
     "description": "Una selección de proyectos freelance y de producto en los que he trabajado — desde la idea hasta resultados medibles."
   },
+  "contact": {
+    "badge": "Contacto",
+    "title": "Hablemos",
+    "description": "¿Tienes una idea de producto o buscas colaborar? Hablemos y construyamos algo increíble juntos.",
+    "form": {
+      "name": "Nombre",
+      "name_placeholder": "Tu nombre",
+      "email": "Email",
+      "email_placeholder": "tu@email.com",
+      "message": "Mensaje",
+      "message_placeholder": "Cuéntame sobre tu proyecto o idea...",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando..."
+    },
+    "social_text": "O conecta conmigo en redes"
+  },
   "footer": {
     "cta": "Construyamos algo increíble juntos",
     "cta_description": "Siempre estoy abierto a discutir ideas de producto, roles interesantes, o cómo puedo ayudarte a llevar tu visión a la realidad.",

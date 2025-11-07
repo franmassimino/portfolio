@@ -26,6 +26,22 @@
     "title": "Some case studies",
     "description": "A selection of freelance and product projects I've worked on — from idea to measurable results."
   },
+  "contact": {
+    "badge": "Contact",
+    "title": "Let's talk",
+    "description": "Have a product idea or looking to collaborate? Let's talk and build something amazing together.",
+    "form": {
+      "name": "Name",
+      "name_placeholder": "Your name",
+      "email": "Email",
+      "email_placeholder": "your@email.com",
+      "message": "Message",
+      "message_placeholder": "Tell me about your project or idea...",
+      "submit": "Send message",
+      "sending": "Sending..."
+    },
+    "social_text": "Or connect with me on social"
+  },
   "footer": {
     "cta": "Let's build something amazing together",
     "cta_description": "I'm always open to discussing product ideas, interesting roles, or how I can help bring your vision to life.",

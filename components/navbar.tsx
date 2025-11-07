@@ -100,16 +100,11 @@ export default function Navbar() {
                 </a>
               ))}
 
-              <Button
-                size="sm"
-                className="px-6"
-                onClick={() => {
-                  // TODO: Add scroll to contact section or open contact modal
-                  console.log("Contact clicked");
-                }}
-              >
-                {t("nav.contact")}
-              </Button>
+              <a href="#contact">
+                <Button size="sm" className="px-6">
+                  {t("nav.contact")}
+                </Button>
+              </a>
             </motion.div>
           </AnimatePresence>
         </div>
@@ -267,16 +262,15 @@ export default function Navbar() {
                     transition={{ duration: 0.4, delay: 0.4 }}
                     className="w-full max-w-xs"
                   >
-                    <Button
-                      size="lg"
-                      className="w-full text-lg py-6"
-                      onClick={() => {
-                        setIsOpen(false);
-                        console.log("Contact clicked");
-                      }}
-                    >
-                      {t("nav.contact")}
-                    </Button>
+                    <a href="#contact" className="w-full">
+                      <Button
+                        size="lg"
+                        className="w-full text-lg py-6"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {t("nav.contact")}
+                      </Button>
+                    </a>
                   </motion.div>
 
                   {/* Social Links */}

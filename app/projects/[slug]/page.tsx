@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ProjectContent from "@/components/project-content";
-import { projectsData } from "@/lib/projects-data";
+import { projectsData } from "@/lib/projects";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -61,33 +61,24 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   const allProjects = Object.keys(projectsData);
-  const currentIndex = allProjects.indexOf(slug);
-  const prevProject = currentIndex > 0 ? allProjects[currentIndex - 1] : null;
-  const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentIndex + 1] : null;
-
-  const prevProjectTitle = prevProject 
-    ? (projectsData[prevProject as keyof typeof projectsData].title)
-    : null;
-  const nextProjectTitle = nextProject 
-    ? (projectsData[nextProject as keyof typeof projectsData].title)
-    : null;
+  const otherProjects = allProjects
+    .filter(projectSlug => projectSlug !== slug)
+    .map(projectSlug => ({
+      slug: projectSlug,
+      data: projectsData[projectSlug as keyof typeof projectsData]
+    }));
 
   return (
     <ProjectContent
       project={project}
       slug={slug}
-      prevProject={prevProject}
-      nextProject={nextProject}
-      prevProjectTitle={prevProjectTitle}
-      nextProjectTitle={nextProjectTitle}
+      otherProjects={otherProjects}
     />
   );
 }
 
 export async function generateStaticParams() {
-  return [
-    { slug: "lamperti-luthier" },
-    { slug: "stay-wild-studio" },
-    { slug: "lina-restaurant" },
-  ];
+  return Object.keys(projectsData).map((slug) => ({
+    slug,
+  }));
 }

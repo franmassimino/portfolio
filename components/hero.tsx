@@ -114,20 +114,24 @@ export default function Hero() {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10"
         >
-          <Button
-            size="lg"
-            variant="outline"
-            className="w-full sm:w-auto h-12 sm:h-10 text-base sm:text-base"
-          >
-            {t("hero.cta_contact")}
-          </Button>
-          <Button
-            size="lg"
-            className="group flex items-center justify-center w-full sm:w-auto h-12 sm:h-10 text-base sm:text-base"
-          >
-            {t("hero.cta_work")}
-            <ArrowRight />
-          </Button>
+          <a href="#contact" className="w-full sm:w-auto">
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto h-12 sm:h-10 text-base sm:text-base"
+            >
+              {t("hero.cta_contact")}
+            </Button>
+          </a>
+          <a href="#projects" className="w-full sm:w-auto">
+            <Button
+              size="lg"
+              className="group flex items-center justify-center w-full sm:w-auto h-12 sm:h-10 text-base sm:text-base"
+            >
+              {t("hero.cta_work")}
+              <ArrowRight />
+            </Button>
+          </a>
         </motion.div>
 
         {/* Social Links */}
