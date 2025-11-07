@@ -16,8 +16,8 @@ export function ProjectNavigation({
   isSpanish,
 }: ProjectNavigationProps) {
   return (
-    <section className="py-6 md:py-12 px-8 max-w-6xl mx-auto mt-16">
-      <h2 className="text-2xl font-bold mb-8 text-center">
+    <section className="pt-8 pb-16 px-8 md:px-12 lg:px-16 max-w-6xl mx-auto">
+      <h2 className="py-2 text-3xl md:text-4xl font-bold mb-6">
         {isSpanish ? "Más Proyectos" : "More Projects"}
       </h2>
 
@@ -34,11 +34,11 @@ export function ProjectNavigation({
             >
               {/* Project Info */}
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-xl md:text-2xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors">
                   {title}
                 </h3>
 
-                <p className="text-sm text-foreground/70 leading-relaxed line-clamp-2">
+                <p className="text-sm md:text-base text-foreground/70 leading-relaxed line-clamp-2">
                   {description}
                 </p>
               </div>

@@ -14,7 +14,6 @@ import {
   ProjectImpact,
   ProjectTakeaways,
   ProjectNavigation,
-  ProjectLegacyResults,
 } from "@/components/project";
 
 interface ProjectContentProps {
@@ -40,7 +39,6 @@ export default function ProjectContent({
   const isSpanish = language === "es";
   const title = isSpanish && project.titleEs ? project.titleEs : project.title;
   const description = isSpanish && project.descriptionEs ? project.descriptionEs : project.description;
-  const results = isSpanish && project.resultsEs ? project.resultsEs : project.results;
   const keyTakeaways = isSpanish && project.keyTakeawaysEs ? project.keyTakeawaysEs : project.keyTakeaways;
 
   return (
@@ -91,11 +89,8 @@ export default function ProjectContent({
 
       {project.metrics && <ProjectMetrics metrics={project.metrics} isSpanish={isSpanish} />}
 
-      {project.impact && <ProjectImpact impact={project.impact} isSpanish={isSpanish} />}
 
       {keyTakeaways && <ProjectTakeaways takeaways={keyTakeaways} isSpanish={isSpanish} />}
-
-      {results && <ProjectLegacyResults results={results} isSpanish={isSpanish} />}
 
       <ProjectNavigation
         otherProjects={otherProjects}

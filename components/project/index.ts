@@ -6,4 +6,3 @@ export { ProjectMetrics } from './ProjectMetrics';
 export { ProjectImpact } from './ProjectImpact';
 export { ProjectTakeaways } from './ProjectTakeaways';
 export { ProjectNavigation } from './ProjectNavigation';
-export { ProjectLegacyResults } from './ProjectLegacyResults';

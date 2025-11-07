@@ -111,8 +111,10 @@ export const linaRestaurant: ProjectData = {
     {
       title: "Outcome",
       titleEs: "Resultado",
-      content: "Over time, Lina surpassed \"La Lina\" in search rankings, now holding the #1 position for branded queries. The restaurant built strong visibility across Google Maps and local discovery, reached 380+ reviews with an average close to 5 stars, and simplified reservations while reducing administrative overhead.",
-      contentEs: "Con el tiempo, Lina superó a \"La Lina\" en los rankings de búsqueda, manteniendo ahora la posición #1 para consultas de marca. El restaurante construyó fuerte visibilidad en Google Maps y descubrimiento local, alcanzó 380+ reseñas con un promedio cercano a 5 estrellas y simplificó las reservas mientras reducía la sobrecarga administrativa."
+      structuredContent: {
+        intro: "Over time, Lina surpassed \"La Lina\" in search rankings, now holding the #1 position for branded queries. The restaurant built strong visibility across Google Maps and local discovery, reached 380+ reviews with an average close to 5 stars, and simplified reservations while reducing administrative overhead.",
+        introEs: "Con el tiempo, Lina superó a \"La Lina\" en los rankings de búsqueda, manteniendo ahora la posición #1 para consultas de marca. El restaurante construyó fuerte visibilidad en Google Maps y descubrimiento local, alcanzó 380+ reseñas con un promedio cercano a 5 estrellas y simplificó las reservas mientras reducía la sobrecarga administrativa."
+      }
     },
   ],
   metrics: [
@@ -170,7 +172,5 @@ export const linaRestaurant: ProjectData = {
     "El buen diseño web se trata de continuidad emocional, no de decoración",
     "Los sistemas de reputación funcionan mejor cuando son humanos y simples",
     "SEO + Maps + UX forman un embudo de conversión único y unificado en hospitalidad",
-  ],
-  results: [],
-  resultsEs: []
+  ]
 };

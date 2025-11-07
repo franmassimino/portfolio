@@ -45,8 +45,9 @@ export default function Navbar() {
   };
 
   const navItems = [
-    { labelKey: "nav.about", href: "#about" },
-    { labelKey: "nav.projects", href: "#projects" },
+    { labelKey: "nav.home", href: "/" },
+    { labelKey: "nav.about", href: "/#about" },
+    { labelKey: "nav.projects", href: "/#projects" },
   ];
 
   const socialLinks = [
@@ -100,7 +101,7 @@ export default function Navbar() {
                 </a>
               ))}
 
-              <a href="#contact">
+              <a href="/#contact">
                 <Button size="sm" className="px-6">
                   {t("nav.contact")}
                 </Button>
@@ -262,7 +263,7 @@ export default function Navbar() {
                     transition={{ duration: 0.4, delay: 0.4 }}
                     className="w-full max-w-xs"
                   >
-                    <a href="#contact" className="w-full">
+                    <a href="/#contact" className="w-full">
                       <Button
                         size="lg"
                         className="w-full text-lg py-6"

@@ -43,8 +43,12 @@ export const lampertiLuthier: ProjectData = {
     {
       title: "Overview",
       titleEs: "Resumen",
-      content: "Lamperti Luthier is a small guitar repair workshop in Buenos Aires run by Mauro, a young craftsman with strong technical skill but very limited online presence. Most of his clients arrived through word-of-mouth, which made demand irregular and hard to plan.\n\nThe goal was not just to 'have a website,' but to create a simple and reliable way for new clients to find him and contact him easily — while maintaining the authenticity of his work.",
-      contentEs: "Lamperti Luthier es un pequeño taller de reparación de guitarras en Buenos Aires dirigido por Mauro, un joven artesano con gran habilidad técnica pero presencia online muy limitada. La mayoría de sus clientes llegaban por boca a boca, lo que hacía la demanda irregular y difícil de planificar.\n\nEl objetivo no era solo 'tener un sitio web', sino crear una forma simple y confiable para que nuevos clientes lo encuentren y contacten fácilmente, mientras se mantiene la autenticidad de su trabajo.",
+      structuredContent: {
+        intro: "Lamperti Luthier is a small guitar repair workshop in Buenos Aires run by Mauro, a young craftsman with strong technical skill but very limited online presence. Most of his clients arrived through word-of-mouth, which made demand irregular and hard to plan.",
+        introEs: "Lamperti Luthier es un pequeño taller de reparación de guitarras en Buenos Aires dirigido por Mauro, un joven artesano con gran habilidad técnica pero presencia online muy limitada. La mayoría de sus clientes llegaban por boca a boca, lo que hacía la demanda irregular y difícil de planificar.",
+        closing: "The goal was not just to 'have a website,' but to create a simple and reliable way for new clients to find him and contact him easily — while maintaining the authenticity of his work.",
+        closingEs: "El objetivo no era solo 'tener un sitio web', sino crear una forma simple y confiable para que nuevos clientes lo encuentren y contacten fácilmente, mientras se mantiene la autenticidad de su trabajo.",
+      }
     },
     {
       title: "Research & Direction",
@@ -91,8 +95,10 @@ export const lampertiLuthier: ProjectData = {
     {
       title: "Outcome",
       titleEs: "Resultado",
-      content: "The workshop moved from inconsistent demand to a steady flow of inquiries throughout the month. Direct communication became immediate, personal, and simple for clients.",
-      contentEs: "El taller pasó de una demanda inconsistente a un flujo constante de consultas durante todo el mes. La comunicación directa se volvió inmediata, personal y simple para los clientes.",
+      structuredContent: {
+        intro: "The workshop moved from inconsistent demand to a steady flow of inquiries throughout the month. Direct communication became immediate, personal, and simple for clients.",
+        introEs: "El taller pasó de una demanda inconsistente a un flujo constante de consultas durante todo el mes. La comunicación directa se volvió inmediata, personal y simple para los clientes.",
+      }
     },
     {
       title: "Business Impact",
@@ -168,7 +174,5 @@ export const lampertiLuthier: ProjectData = {
     "El posicionamiento importa tanto como el diseño, especialmente cuando aún se está construyendo credibilidad.",
     "Reducir la fricción en la comunicación puede tener un impacto mayor que agregar funciones.",
     "El crecimiento sostenible para negocios locales a menudo proviene de la claridad, accesibilidad y consistencia, más que de la escala.",
-  ],
-  results: [],
-  resultsEs: []
+  ]
 };

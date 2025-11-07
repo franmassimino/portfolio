@@ -18,13 +18,11 @@ export interface StructuredContent {
   closingEs?: string;
 }
 
-// Section can be either simple string content or structured content
+// Section with standardized structured content
 export interface Section {
   title: string;
   titleEs: string;
-  content?: string;
-  contentEs?: string;
-  structuredContent?: StructuredContent;
+  structuredContent: StructuredContent;
 }
 
 export interface Metric {
@@ -59,7 +57,4 @@ export interface ProjectData {
   impact?: Impact;
   keyTakeaways?: string[];
   keyTakeawaysEs?: string[];
-  // Legacy format support
-  results?: string[];
-  resultsEs?: string[];
 }

@@ -10,10 +10,12 @@ export function ProjectImpact({ impact, isSpanish }: ProjectImpactProps) {
   const content = isSpanish && impact.contentEs ? impact.contentEs : impact.content;
 
   return (
-    <section className="py-6 md:py-12 px-8 max-w-6xl mx-auto">
+    <section className="py-10 px-8 md:px-12 lg:px-16 max-w-6xl mx-auto">
+      <h2 className="border-l-4 border-primary/30 pl-4 py-2 text-3xl md:text-4xl font-bold mb-6 text-foreground">
+        {title}
+      </h2>
       <div className="border-2 border-primary/30 bg-primary/5 rounded-lg p-8">
-        <h2 className="text-2xl font-bold mb-4">{title}</h2>
-        <p className="text-lg text-foreground/80 leading-relaxed">{content}</p>
+        <p className="text-base md:text-lg text-foreground/80 leading-relaxed">{content}</p>
       </div>
     </section>
   );

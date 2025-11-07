@@ -15,8 +15,8 @@ interface ProjectKeyFeaturesProps {
 
 export function ProjectKeyFeatures({ features, isSpanish }: ProjectKeyFeaturesProps) {
   return (
-    <section className="py-6 md:py-12 px-8 max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold mb-12 text-center">
+    <section className="py-10 px-8 md:px-12 lg:px-16 max-w-6xl mx-auto">
+      <h2 className="border-l-4 border-primary/30 pl-4 py-2 text-3xl md:text-4xl font-bold mb-6">
         {isSpanish ? "Características Clave" : "Key Features"}
       </h2>
 
@@ -38,8 +38,8 @@ export function ProjectKeyFeatures({ features, isSpanish }: ProjectKeyFeaturesPr
                   </div>
                 )}
                 <div>
-                  <h3 className="font-bold text-xl mb-3 text-foreground">{featureTitle}</h3>
-                  <p className="text-foreground/70 leading-relaxed">{featureDescription}</p>
+                  <h3 className="font-semibold text-xl md:text-2xl mb-3 text-foreground">{featureTitle}</h3>
+                  <p className="text-foreground/70 leading-relaxed text-base md:text-lg">{featureDescription}</p>
                 </div>
               </div>
               <div className="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

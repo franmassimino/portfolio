@@ -21,11 +21,7 @@ export function ProjectMetrics({ metrics, isSpanish }: ProjectMetricsProps) {
   if (!metrics || metrics.length === 0) return null;
 
   return (
-    <section className="py-6 md:py-12 px-8 max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold mb-12 text-center">
-        {isSpanish ? "Resultados" : "Results"}
-      </h2>
-
+    <section className="py-10 px-8 md:px-12 lg:px-16 max-w-6xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {metrics.map((metric, index) => {
           const metricLabel = isSpanish && metric.labelEs ? metric.labelEs : metric.label;
@@ -53,7 +49,7 @@ export function ProjectMetrics({ metrics, isSpanish }: ProjectMetricsProps) {
                   </p>
                 </div>
                 <div className="w-12 h-px bg-primary/30" />
-                <p className="text-sm text-foreground/70 leading-relaxed max-w-[200px]">
+                <p className="text-sm md:text-base text-foreground/70 leading-relaxed max-w-[200px]">
                   {metricInsight}
                 </p>
               </div>

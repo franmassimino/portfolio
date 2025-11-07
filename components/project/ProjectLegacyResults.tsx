@@ -9,15 +9,15 @@ export function ProjectLegacyResults({ results, isSpanish }: ProjectLegacyResult
   if (!results || results.length === 0) return null;
 
   return (
-    <section className="py-6 md:py-12 px-8 max-w-6xl mx-auto bg-primary/5 rounded-lg">
-      <h2 className="text-3xl font-bold mb-8">
+    <section className="py-10 px-8 md:px-12 lg:px-16 max-w-6xl mx-auto">
+      <h2 className="border-l-4 border-primary/30 pl-4 py-2 text-3xl md:text-4xl font-bold mb-6 text-foreground">
         {isSpanish ? "Resultados" : "Results"}
       </h2>
       <ul className="space-y-4">
         {results.map((result, index) => (
           <li key={index} className="flex items-start gap-3">
             <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-            <p>{result}</p>
+            <p className="text-base md:text-lg text-foreground/80">{result}</p>
           </li>
         ))}
       </ul>

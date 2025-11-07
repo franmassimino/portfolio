@@ -87,8 +87,10 @@ export const stayWildStudio: ProjectData = {
     {
       title: "Launch",
       titleEs: "Lanzamiento",
-      content: "When the store went live, the newsletter audience — waiting and ready — converted quickly. In the first week after launch, the store sold over €5K, several products sold out, and customers from multiple regions placed orders successfully. The buying experience received consistently positive feedback. The launch validated both the demand and the purchase flow.",
-      contentEs: "Cuando la tienda se puso en marcha, la audiencia del newsletter, esperando y lista, convirtió rápidamente. En la primera semana después del lanzamiento, la tienda vendió más de €5K, varios productos se agotaron y clientes de múltiples regiones realizaron pedidos con éxito. La experiencia de compra recibió retroalimentación consistentemente positiva. El lanzamiento validó tanto la demanda como el flujo de compra."
+      structuredContent: {
+        intro: "When the store went live, the newsletter audience — waiting and ready — converted quickly. In the first week after launch, the store sold over €5K, several products sold out, and customers from multiple regions placed orders successfully. The buying experience received consistently positive feedback. The launch validated both the demand and the purchase flow.",
+        introEs: "Cuando la tienda se puso en marcha, la audiencia del newsletter, esperando y lista, convirtió rápidamente. En la primera semana después del lanzamiento, la tienda vendió más de €5K, varios productos se agotaron y clientes de múltiples regiones realizaron pedidos con éxito. La experiencia de compra recibió retroalimentación consistentemente positiva. El lanzamiento validó tanto la demanda como el flujo de compra."
+      }
     },
     {
       title: "Business Impact",
@@ -166,7 +168,5 @@ export const stayWildStudio: ProjectData = {
     "La elección de plataforma puede ser una decisión estratégica de crecimiento, no solo técnica",
     "Una experiencia de compra fluida y humana convierte la demanda existente en ventas sostenibles",
     "Empoderar a la fundadora asegura que la marca pueda crecer sin dependencia",
-  ],
-  results: [],
-  resultsEs: []
+  ]
 };

@@ -9,21 +9,18 @@ export function ProjectTakeaways({ takeaways, isSpanish }: ProjectTakeawaysProps
   if (!takeaways || takeaways.length === 0) return null;
 
   return (
-    <section className="pt-12 px-8 max-w-6xl mx-auto">
-      <div className="flex items-center gap-3 mb-8">
-        <Lightbulb className="w-8 h-8 text-primary" />
-        <h2 className="text-3xl font-bold">
-          {isSpanish ? "Conclusiones Clave" : "Key Takeaways"}
-        </h2>
-      </div>
+    <section className="py-8 px-8 md:px-12 lg:px-16 max-w-6xl mx-auto">
+      <h2 className="border-l-4 border-primary/30 pl-4 py-2 text-3xl md:text-4xl font-bold mb-6 text-foreground">
+        {isSpanish ? "Conclusiones Clave" : "Key Takeaways"}
+      </h2>
 
       <div className="space-y-4">
         {takeaways.map((takeaway, index) => (
           <div
             key={index}
-            className="border-l-4 border-primary bg-primary/5 p-6 rounded-r-lg hover:bg-primary/10 transition-colors"
+            className="border-primary bg-primary/5 p-6 rounded-r-lg hover:bg-primary/10 transition-colors"
           >
-            <p className="text-foreground/90 leading-relaxed">{takeaway}</p>
+            <p className="text-base md:text-lg text-foreground/90 leading-relaxed">{takeaway}</p>
           </div>
         ))}
       </div>
