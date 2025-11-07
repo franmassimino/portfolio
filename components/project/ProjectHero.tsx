@@ -10,7 +10,7 @@ interface ProjectHeroProps {
 
 export function ProjectHero({ title, description, techStack, isSpanish }: ProjectHeroProps) {
   return (
-    <section className="pt-16 pb-4 px-8 max-w-6xl mx-auto">
+    <section className="pt-16 pb-4 px-8 md:max-w-6xl mx-auto">
       <Link
         href="/#projects"
         className="inline-flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors mb-8"

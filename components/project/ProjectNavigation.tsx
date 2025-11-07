@@ -16,7 +16,7 @@ export function ProjectNavigation({
   isSpanish,
 }: ProjectNavigationProps) {
   return (
-    <section className="py-12 px-8 max-w-6xl mx-auto border-t border-primary/20 mt-16">
+    <section className="py-12 px-8 max-w-6xl mx-auto mt-16">
       <h2 className="text-2xl font-bold mb-8 text-center">
         {isSpanish ? "Más Proyectos" : "More Projects"}
       </h2>
