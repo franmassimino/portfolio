@@ -28,7 +28,7 @@ export default function StayWildStudioPage() {
     titleEs: "Stay Wild Studio",
     description: "Launching an online store to scale a growing handmade accessories brand",
     descriptionEs: "Lanzamiento de una tienda online para escalar una marca de accesorios artesanales en crecimiento",
-    coverImage: "/assets/stay-wild-mockup.png",
+    coverImage: "/assets/stay-wild-mockup2.png",
     completedDate: "April 2024",
     duration: "3 months",
     techStack: ["Shopify", "Liquid", "Sendcloud", "Stripe", "Mailchimp", "GA4", "SEO structure"],

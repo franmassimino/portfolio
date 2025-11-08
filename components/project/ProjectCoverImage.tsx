@@ -15,7 +15,7 @@ export function ProjectCoverImage({ src, alt }: ProjectCoverImageProps) {
             alt={alt}
             width={1200}
             height={800}
-            className="object-contain w-full h-auto max-h-[500px] mx-auto rounded-md"
+            className="object-cover w-full h-auto max-h-[600px] mx-auto rounded-md"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
             priority
           />
