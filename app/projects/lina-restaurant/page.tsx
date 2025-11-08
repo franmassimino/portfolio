@@ -28,7 +28,7 @@ export default function LinaRestaurantPage() {
     titleEs: "Lina Restaurante",
     description: "Building the digital presence and local positioning for a new contemporary restaurant",
     descriptionEs: "Construcción de la presencia digital y posicionamiento local para un nuevo restaurante contemporáneo",
-    coverImage: "/assets/lina.png",
+    coverImage: "/assets/lina-mockup.png",
     completedDate: "May 2024",
     duration: "2 months",
     techStack: ["Next.js", "TailwindCSS", "CoverManager", "Google Business Profile", "GA4", "Local SEO"],
