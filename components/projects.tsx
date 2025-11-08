@@ -48,7 +48,7 @@ export default function Projects() {
       title: "Stay Wild Studio",
       description: "E-commerce platform for sustainable fashion brand.",
       tags: ["Shopify", "React", "Marketing", "Branding", "E-commerce"],
-      image: "/assets/stay-wild-mockup.png",
+      image: "/assets/stay-wild-mockup2.png",
       href: "/projects/stay-wild-studio",
     },
     {
