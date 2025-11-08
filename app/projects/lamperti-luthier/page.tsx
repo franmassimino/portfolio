@@ -31,7 +31,7 @@ export default function LampertiLuthierPage() {
     coverImage: "/assets/lamperti-luthier.png",
     completedDate: "March 2024",
     duration: "6 months",
-    techStack: ["Next.js", "TailwindCSS", "Google Analytics 4", "Hotjar", "Google Ads", "Meta Ads", "Google Business Profile"],
+    techStack: ["Next.js", "Tailwind", "Google Analytics", "Hotjar", "Google Ads"],
     sections: [
       {
         title: "Overview",
