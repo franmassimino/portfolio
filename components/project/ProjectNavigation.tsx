@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import type { ProjectData } from "@/lib/projects";
+import type { ProjectData } from "./types";
 
 interface ProjectNavigationProps {
   otherProjects: Array<{
@@ -16,7 +16,7 @@ export function ProjectNavigation({
   isSpanish,
 }: ProjectNavigationProps) {
   return (
-    <section className="pt-8 pb-16 px-8 md:px-12 lg:px-16 max-w-6xl mx-auto">
+    <section className="py-16 px-8  max-w-6xl mx-auto">
       <h2 className="py-2 text-3xl md:text-4xl font-bold mb-6">
         {isSpanish ? "Más Proyectos" : "More Projects"}
       </h2>

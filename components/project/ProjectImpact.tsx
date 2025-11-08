@@ -1,4 +1,4 @@
-import type { Impact } from "@/lib/projects";
+import type { Impact } from "./types";
 
 interface ProjectImpactProps {
   impact: Impact;

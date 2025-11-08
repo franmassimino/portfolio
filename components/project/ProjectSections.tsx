@@ -1,5 +1,5 @@
 import { CheckCircle, Zap } from "lucide-react";
-import type { Section } from "@/lib/projects";
+import type { Section } from "./types";
 
 interface ProjectSectionsProps {
   sections: Section[];
@@ -8,7 +8,7 @@ interface ProjectSectionsProps {
 
 export function ProjectSections({ sections, isSpanish }: ProjectSectionsProps) {
   return (
-    <section className="pt-2 md:pt-6 px-8 md:px-12 lg:px-16 max-w-6xl mx-auto">
+    <section className="pt-2 md:pt-6 px-8 max-w-6xl mx-auto">
       <div className="space-y-8 md:space-y-10">
         {sections.map((section, index) => {
           const sectionTitle = isSpanish && section.titleEs ? section.titleEs : section.title;

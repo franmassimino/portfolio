@@ -9,7 +9,7 @@ export function ProjectTakeaways({ takeaways, isSpanish }: ProjectTakeawaysProps
   if (!takeaways || takeaways.length === 0) return null;
 
   return (
-    <section className="py-8 px-8 md:px-12 lg:px-16 max-w-6xl mx-auto">
+    <section className="pt-6 px-8  max-w-6xl mx-auto">
       <h2 className="border-l-4 border-primary/30 pl-4 py-2 text-3xl md:text-4xl font-bold mb-6 text-foreground">
         {isSpanish ? "Conclusiones Clave" : "Key Takeaways"}
       </h2>

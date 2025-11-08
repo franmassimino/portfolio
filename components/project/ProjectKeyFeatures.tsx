@@ -1,5 +1,5 @@
 import { Target, BarChart3, Activity, MapPin, LucideIcon } from "lucide-react";
-import type { KeyFeature } from "@/lib/projects";
+import type { KeyFeature } from "./types";
 
 const iconMap: Record<string, LucideIcon> = {
   "target": Target,

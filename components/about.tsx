@@ -33,13 +33,12 @@ export default function About() {
 
   const techStack = [
     "Next.js",
-    "React",
+    "Typescript",
     "Node",
     "Prisma",
-    "Postgres",
-    "Vercel",
-    "Shopify",
-    "AI"
+    "SQL",
+    "Figma",
+    "GA4"
   ];
 
   return (
