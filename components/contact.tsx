@@ -87,7 +87,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative flex items-center justify-center overflow-hidden py-12 md:py-16"
+      className="relative flex items-center justify-center overflow-hidden py-12 md:py-16 scroll-mt-20"
     >
       {/* Animated background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
@@ -149,14 +149,14 @@ export default function Contact() {
         {/* Description */}
         <motion.p
           variants={itemVariants}
-          className="text-base md:text-lg text-foreground/70 text-center max-w-2xl mx-auto mb-8"
+          className="text-base md:text-lg text-foreground/70 text-center max-w-xl mx-auto mb-8"
         >
           {t("contact.description")}
         </motion.p>
 
         {/* Contact Card */}
         <motion.div variants={itemVariants}>
-          <Card className="border border-primary/20 bg-background/50 backdrop-blur-sm">
+          <Card className="border max-w-xl  mx-auto border-primary/20 bg-background/50 backdrop-blur-sm">
             <CardContent className="p-6 md:p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Field */}

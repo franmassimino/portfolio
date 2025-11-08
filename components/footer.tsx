@@ -25,7 +25,7 @@ export default function Footer() {
   const quickLinks = [
     { labelKey: "nav.about", href: "#about" },
     { labelKey: "nav.projects", href: "#projects" },
-    { labelKey: "nav.contact", href: "mailto:franmassi1904@gmail.com" },
+    { labelKey: "nav.contact", href: "#contact" },
   ];
 
   return (
@@ -43,7 +43,7 @@ export default function Footer() {
           <p className="text-sm text-muted-foreground inline-flex items-center gap-2 flex-wrap justify-center">
             <span>{t("footer.cta")}</span>
             <a
-              href="mailto:franmassi1904@gmail.com"
+              href="#contact"
               className="inline-flex items-center gap-1 text-foreground hover:text-primary transition-colors font-medium group"
             >
               {t("hero.cta_contact")}

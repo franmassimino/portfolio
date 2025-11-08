@@ -44,7 +44,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative flex items-center justify-center overflow-hidden py-12 md:py-16"
+      className="relative flex items-center justify-center overflow-hidden py-12 md:py-16 scroll-mt-20"
     >
       {/* Animated background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
@@ -152,8 +152,8 @@ export default function About() {
           variants={itemVariants}
           className="mt-8 text-center"
         >
-          <Button size="lg" className="px-8">
-            {t("about.cta")}
+          <Button size="lg" className="px-8" asChild>
+            <a href="#contact">{t("about.cta")}</a>
           </Button>
         </motion.div>
 
